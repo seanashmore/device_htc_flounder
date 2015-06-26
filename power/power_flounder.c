@@ -40,7 +40,7 @@
 #define GPU_BOOST_PATH "/dev/constraint_gpu_freq"
 #define IO_IS_BUSY_PATH "/sys/devices/system/cpu/cpufreq/interactive/io_is_busy"
 #define LOW_POWER_MAX_FREQ "1020000"
-#define NORMAL_MAX_FREQ "2901000"
+#define NORMAL_MAX_FREQ "1938000"
 #define GPU_FREQ_CONSTRAINT "852000 852000 -1 2000"
 #define SVELTE_PROP "ro.boot.svelte"
 #define SVELTE_MAX_FREQ_PROP "ro.config.svelte.max_cpu_freq"
@@ -100,7 +100,7 @@ static void power_init(struct power_module __unused *module)
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/min_sample_time",
                 "80000");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/hispeed_freq",
-                "1530000");
+                "1020000");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load",
                 "99");
     sysfs_write("/sys/devices/system/cpu/cpufreq/interactive/target_loads",
