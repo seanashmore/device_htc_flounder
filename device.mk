@@ -263,6 +263,11 @@ PRODUCT_PACKAGES += \
 # Since Flounder cannot use DSP - disable it from building
 FLOUNDER_NO_DSP := true
 
+# Dalvik/ART properties
+PRODUCT_PROPERTY_OVERRIDES := \
+    dalvik.vm.dex2oat-filter=everything \
+    dalvik.vm.image-dex2oat-filter=everything
+
 # for keyboard key mappings
 PRODUCT_PACKAGES += \
 	VolantisKeyboard
